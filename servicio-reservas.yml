@@ -1,0 +1,25 @@
+eureka:
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://admin:admin@localhost:8761/eureka
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: debug
+server:
+  port: 10000
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: sasa
+    url: 'jdbc:mysql://localhost/viajes?serverTimezone=America/Mexico_City #&useSSL=false'
+    username: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    generate-ddl: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
