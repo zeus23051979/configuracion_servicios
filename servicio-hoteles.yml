@@ -1,3 +1,6 @@
+spring:
+  application:
+    name: servicio-hoteles
 eureka:
   client:
     register-with-eureka: true
